@@ -16,6 +16,8 @@
 		5229361B24AD3D08001B6156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5229361924AD3D08001B6156 /* LaunchScreen.storyboard */; };
 		5296BFC824AD3F7E00FF959A /* LeagueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFC724AD3F7E00FF959A /* LeagueRequest.swift */; };
 		5296BFCA24AD3F9400FF959A /* LeagueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFC924AD3F9400FF959A /* LeagueRouter.swift */; };
+		5296BFCD24AD456500FF959A /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFCC24AD456500FF959A /* League.swift */; };
+		5296BFCF24AD47DF00FF959A /* LeagueDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFCE24AD47DF00FF959A /* LeagueDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5229361C24AD3D08001B6156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5296BFC724AD3F7E00FF959A /* LeagueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRequest.swift; sourceTree = "<group>"; };
 		5296BFC924AD3F9400FF959A /* LeagueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRouter.swift; sourceTree = "<group>"; };
+		5296BFCC24AD456500FF959A /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		5296BFCE24AD47DF00FF959A /* LeagueDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetails.swift; sourceTree = "<group>"; };
 		A5A9EDCCDE9AA7FE8477E5A5 /* Pods-LeagueGoals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueGoals.debug.xcconfig"; path = "Target Support Files/Pods-LeagueGoals/Pods-LeagueGoals.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2C33215C2A0FD928961219 /* Pods-LeagueGoals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueGoals.release.xcconfig"; path = "Target Support Files/Pods-LeagueGoals/Pods-LeagueGoals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,7 @@
 		5229360D24AD3D06001B6156 /* LeagueGoals */ = {
 			isa = PBXGroup;
 			children = (
+				5296BFCB24AD450100FF959A /* Model */,
 				5296BFC624AD3F4600FF959A /* NetworkLayer */,
 				5229360E24AD3D06001B6156 /* AppDelegate.swift */,
 				5229361024AD3D06001B6156 /* SceneDelegate.swift */,
@@ -86,6 +91,15 @@
 				5296BFC924AD3F9400FF959A /* LeagueRouter.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		5296BFCB24AD450100FF959A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5296BFCC24AD456500FF959A /* League.swift */,
+				5296BFCE24AD47DF00FF959A /* LeagueDetails.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6662213523A02C3F99FE411D /* Pods */ = {
@@ -220,10 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5296BFCF24AD47DF00FF959A /* LeagueDetails.swift in Sources */,
 				5229361324AD3D06001B6156 /* ViewController.swift in Sources */,
 				5229360F24AD3D06001B6156 /* AppDelegate.swift in Sources */,
 				5296BFCA24AD3F9400FF959A /* LeagueRouter.swift in Sources */,
 				5296BFC824AD3F7E00FF959A /* LeagueRequest.swift in Sources */,
+				5296BFCD24AD456500FF959A /* League.swift in Sources */,
 				5229361124AD3D06001B6156 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
