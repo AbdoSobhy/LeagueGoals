@@ -110,6 +110,14 @@
 			path = "League Cell";
 			sourceTree = "<group>";
 		};
+		5251A0BA24AE0DF500B53A5D /* Details Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5296BFD224AD4F2500FF959A /* DetailsViewController.swift */,
+			);
+			path = "Details Screen";
+			sourceTree = "<group>";
+		};
 		5296BFC624AD3F4600FF959A /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				5251A0B824AE0BA100B53A5D /* League Screen */,
-				5296BFD224AD4F2500FF959A /* DetailsViewController.swift */,
+				5251A0BA24AE0DF500B53A5D /* Details Screen */,
 			);
 			path = View;
 			sourceTree = "<group>";
