@@ -10,7 +10,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     var detailsViewControllerPresenter : DetailsViewControllerPresenter?
-    
+    var leaugeId : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         detailsViewControllerPresenter = DetailsViewControllerPresenterImpl(view: self)

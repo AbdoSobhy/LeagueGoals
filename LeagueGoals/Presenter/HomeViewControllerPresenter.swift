@@ -7,23 +7,25 @@
 //
 
 import Foundation
-protocol HomeViewControllelrView : AnyObject {
+protocol HomeViewControllerView : AnyObject {
+    func navigateToLeaugesDetails(id : String)
     
 }
 protocol HomeViewControllerPresenter {
     var leaugesCount: Int { get }
 
-    func configure(cell : LeaugeCellView , row : Int)
     func getLeauges(completionHandler : @escaping ([Leagues])->Void)
+    func configure(cell : LeaugeCellView , row : Int)
+    func didSelectRowAt(index: Int)
 
 }
 class HomeViewControllerPresenterImpl {
-    weak var view : HomeViewControllelrView?
+    weak var view : HomeViewControllerView?
     
     var leauges = [Leagues]()
     
     
-    init(view : HomeViewControllelrView) {
+    init(view : HomeViewControllerView) {
         self.view = view
     }
 }
@@ -50,6 +52,10 @@ extension HomeViewControllerPresenterImpl : HomeViewControllerPresenter {
         cell.display(leagueName: self.leauges[row].strLeague ?? "")
         cell.display(leagueShortName: self.leauges[row].strLeagueAlternate ?? "")
         cell.display(leagueSport: self.leauges[row].strSport ?? "")
+    }
+    func didSelectRowAt(index: Int){
+        guard let leagueID = self.leauges[index].idLeague else { return }
+        view?.navigateToLeaugesDetails(id: leagueID)
     }
     
 }

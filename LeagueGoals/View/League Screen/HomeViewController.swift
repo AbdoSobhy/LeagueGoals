@@ -37,9 +37,17 @@ extension HomeViewController : UITableViewDataSource {
     
 }
 extension HomeViewController : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.homeViewControllerPresenter?.didSelectRowAt(index: indexPath.row)
+    }
 }
-extension HomeViewController : HomeViewControllelrView {
+extension HomeViewController : HomeViewControllerView {
+    func navigateToLeaugesDetails(id: String) {
+        guard let detailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else {return}
+        detailsViewController.leaugeId = id
+        present(detailsViewController,animated: true,completion: nil)
+    }
+    
     
 }
 
