@@ -7,17 +7,46 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailsViewController: UIViewController {
+    @IBOutlet weak private var leaugeLogo: UIImageView!
+    @IBOutlet weak private var leaugeName: UILabel!
+    @IBOutlet weak private var leaugeSport: UILabel!
+    @IBOutlet weak private var leaugeCountry: UILabel!
+    @IBOutlet weak private var leaugeDescription: UITextView!
+    
     var detailsViewControllerPresenter : DetailsViewControllerPresenter?
-    var leaugeId : String = ""
+    var leaugeId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         detailsViewControllerPresenter = DetailsViewControllerPresenterImpl(view: self)
-        // Do any additional setup after loading the view.
+        detailsViewControllerPresenter?.getLeaugeDetails(completionHandler: { (leauge) in
+
+        })
+    }
+    @IBAction private func closeBtnWasPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
 extension DetailsViewController : DetailsViewControllerView {
+    func display(leaugeLogo : String ){
+        self.leaugeLogo.kf.setImage(with: URL(string: leaugeLogo))
+    }
+    func display(leaugeName : String){
+        self.leaugeName.text = leaugeName
+    }
+    func display(leaugeSport : String){
+        self.leaugeSport.text = leaugeSport
+    }
+    func display(leaugeCountry : String){
+        self.leaugeCountry.text = leaugeCountry
+    }
+    func display(leaugeDescription : String){
+        self.leaugeDescription.text = leaugeDescription
+    }
+
+
     
 }

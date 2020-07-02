@@ -7,8 +7,10 @@
 //
 
 import Foundation
-
 struct LeagueDetails : Codable {
+    let leagues : [LeagueData]
+}
+struct LeagueData : Codable {
     
     let strLeague : String?
     let strSport : String?

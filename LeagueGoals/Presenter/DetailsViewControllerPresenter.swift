@@ -8,10 +8,16 @@
 
 import Foundation
 protocol DetailsViewControllerView : AnyObject {
-    
+    var leaugeId : String? { get }
+    func display(leaugeLogo : String )
+    func display(leaugeName : String)
+    func display(leaugeSport : String)
+    func display(leaugeCountry : String)
+    func display(leaugeDescription : String)
+
 }
 protocol DetailsViewControllerPresenter {
-    
+    func getLeaugeDetails(completionHandler : @escaping (LeagueDetails)->Void)
 }
 class DetailsViewControllerPresenterImpl {
     weak var view : DetailsViewControllerView?
@@ -21,5 +27,19 @@ class DetailsViewControllerPresenterImpl {
     }
 }
 extension DetailsViewControllerPresenterImpl : DetailsViewControllerPresenter {
+    
+    func getLeaugeDetails(completionHandler: @escaping (LeagueDetails) -> Void) {
+        guard let id = view?.leaugeId else {return}
+        LeagueRequest.leagueRequest(request: LeagueRouter.leaguesDetails(id: id)) { (details : LeagueDetails?) in
+            if details != nil {
+                self.view?.display(leaugeLogo: details?.leagues[0].strLogo ?? " ")
+                self.view?.display(leaugeName: details?.leagues[0].strLeague ?? " ")
+                self.view?.display(leaugeSport: details?.leagues[0].strSport ?? " ")
+                self.view?.display(leaugeCountry: details?.leagues[0].strCountry ?? " ")
+                self.view?.display(leaugeDescription: details?.leagues[0].strDescriptionEN ?? " ")
+            }
+        }
+    }
+    
     
 }
