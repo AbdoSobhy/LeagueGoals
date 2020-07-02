@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47B260001CB5B9569B3F9451 /* Pods_LeagueGoals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC4FBD872EE3F1E446A8B7D /* Pods_LeagueGoals.framework */; };
+		5224251D24AD79F300807496 /* LeaugeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224251C24AD79F300807496 /* LeaugeTableViewCell.swift */; };
 		5229360F24AD3D06001B6156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229360E24AD3D06001B6156 /* AppDelegate.swift */; };
 		5229361124AD3D06001B6156 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229361024AD3D06001B6156 /* SceneDelegate.swift */; };
 		5229361324AD3D06001B6156 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229361224AD3D06001B6156 /* HomeViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		2EC4FBD872EE3F1E446A8B7D /* Pods_LeagueGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5224251C24AD79F300807496 /* LeaugeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaugeTableViewCell.swift; sourceTree = "<group>"; };
 		5229360B24AD3D06001B6156 /* LeagueGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeagueGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5229360E24AD3D06001B6156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5229361024AD3D06001B6156 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				5229361224AD3D06001B6156 /* HomeViewController.swift */,
+				5224251C24AD79F300807496 /* LeaugeTableViewCell.swift */,
 				5296BFD224AD4F2500FF959A /* DetailsViewController.swift */,
 			);
 			path = View;
@@ -264,6 +267,7 @@
 				5229361324AD3D06001B6156 /* HomeViewController.swift in Sources */,
 				5229360F24AD3D06001B6156 /* AppDelegate.swift in Sources */,
 				5296BFD324AD4F2500FF959A /* DetailsViewController.swift in Sources */,
+				5224251D24AD79F300807496 /* LeaugeTableViewCell.swift in Sources */,
 				5296BFD524AD4FC800FF959A /* DetailsViewControllerPresenter.swift in Sources */,
 				5296BFCA24AD3F9400FF959A /* LeagueRouter.swift in Sources */,
 				5296BFC824AD3F7E00FF959A /* LeagueRequest.swift in Sources */,
