@@ -14,6 +14,8 @@ protocol DetailsViewControllerView : AnyObject {
     func display(leaugeSport : String)
     func display(leaugeCountry : String)
     func display(leaugeDescription : String)
+    func startLoading()
+    func stopLoading()
 
 }
 protocol DetailsViewControllerPresenter {
@@ -30,6 +32,7 @@ extension DetailsViewControllerPresenterImpl : DetailsViewControllerPresenter {
     
     func getLeaugeDetails(completionHandler: @escaping (LeagueDetails) -> Void) {
         guard let id = view?.leaugeId else {return}
+        view?.startLoading()
         LeagueRequest.leagueRequest(request: LeagueRouter.leaguesDetails(id: id)) { (details : LeagueDetails?) in
             if details != nil {
                 self.view?.display(leaugeLogo: details?.leagues[0].strLogo ?? " ")
@@ -37,7 +40,9 @@ extension DetailsViewControllerPresenterImpl : DetailsViewControllerPresenter {
                 self.view?.display(leaugeSport: details?.leagues[0].strSport ?? " ")
                 self.view?.display(leaugeCountry: details?.leagues[0].strCountry ?? " ")
                 self.view?.display(leaugeDescription: details?.leagues[0].strDescriptionEN ?? " ")
+                
             }
+            self.view?.stopLoading()
         }
     }
     

@@ -8,8 +8,9 @@
 
 import UIKit
 import Kingfisher
+import NVActivityIndicatorView
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak private var leaugeLogo: UIImageView!
     @IBOutlet weak private var leaugeName: UILabel!
     @IBOutlet weak private var leaugeSport: UILabel!
@@ -22,7 +23,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         detailsViewControllerPresenter = DetailsViewControllerPresenterImpl(view: self)
         detailsViewControllerPresenter?.getLeaugeDetails(completionHandler: { (leauge) in
-
+            
         })
     }
     @IBAction private func closeBtnWasPressed(_ sender: Any) {
@@ -31,6 +32,13 @@ class DetailsViewController: UIViewController {
     
 }
 extension DetailsViewController : DetailsViewControllerView {
+    func startLoading() {
+        self.startAnimating()
+    }
+    
+    func stopLoading() {
+        self.stopAnimating()
+    }
     func display(leaugeLogo : String ){
         self.leaugeLogo.kf.setImage(with: URL(string: leaugeLogo))
     }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak private var leaugeTableView: UITableView!
     var homeViewControllerPresenter : HomeViewControllerPresenter?
     
@@ -42,6 +43,14 @@ extension HomeViewController : UITableViewDelegate {
     }
 }
 extension HomeViewController : HomeViewControllerView {
+    func startLoading() {
+        self.startAnimating()
+    }
+    
+    func stopLoading() {
+        self.stopAnimating()
+    }
+    
     func navigateToLeaugesDetails(id: String) {
         guard let detailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else {return}
         detailsViewController.leaugeId = id

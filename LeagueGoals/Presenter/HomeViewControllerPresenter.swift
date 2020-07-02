@@ -9,6 +9,8 @@
 import Foundation
 protocol HomeViewControllerView : AnyObject {
     func navigateToLeaugesDetails(id : String)
+    func startLoading()
+    func stopLoading()
     
 }
 protocol HomeViewControllerPresenter {
@@ -36,6 +38,7 @@ extension HomeViewControllerPresenterImpl : HomeViewControllerPresenter {
     }
     
     func getLeauges(completionHandler: @escaping ([Leagues]) -> Void) {
+        view?.startLoading()
         LeagueRequest.leagueRequest(request: LeagueRouter.getLeagues) { (leauges : League?) in
             if let leauges = leauges {
                 self.leauges.append(contentsOf: leauges.leagues)
@@ -44,6 +47,7 @@ extension HomeViewControllerPresenterImpl : HomeViewControllerPresenter {
             else {
                 // show error to user
             }
+            self.view?.stopLoading()
         }
     }
 
