@@ -93,6 +93,23 @@
 			path = LeagueGoals;
 			sourceTree = "<group>";
 		};
+		5251A0B824AE0BA100B53A5D /* League Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5251A0B924AE0BB900B53A5D /* League Cell */,
+				5229361224AD3D06001B6156 /* HomeViewController.swift */,
+			);
+			path = "League Screen";
+			sourceTree = "<group>";
+		};
+		5251A0B924AE0BB900B53A5D /* League Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5224251C24AD79F300807496 /* LeaugeTableViewCell.swift */,
+			);
+			path = "League Cell";
+			sourceTree = "<group>";
+		};
 		5296BFC624AD3F4600FF959A /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +131,7 @@
 		5296BFD024AD4DF400FF959A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5229361224AD3D06001B6156 /* HomeViewController.swift */,
-				5224251C24AD79F300807496 /* LeaugeTableViewCell.swift */,
+				5251A0B824AE0BA100B53A5D /* League Screen */,
 				5296BFD224AD4F2500FF959A /* DetailsViewController.swift */,
 			);
 			path = View;

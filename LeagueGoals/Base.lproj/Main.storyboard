@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="90" width="375" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaugeTableViewCell" rowHeight="97" id="mzW-hl-EYp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaugeTableViewCell" rowHeight="97" id="mzW-hl-EYp" customClass="LeaugeTableViewCell" customModule="LeagueGoals" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mzW-hl-EYp" id="Mr4-Nh-tjg">
@@ -86,8 +86,17 @@
                                                 <constraint firstItem="tqp-SR-p3J" firstAttribute="leading" secondItem="Mr4-Nh-tjg" secondAttribute="leadingMargin" id="wiR-B6-VaI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leagueName" destination="tqp-SR-p3J" id="vw4-4Y-kMm"/>
+                                            <outlet property="leagueShortName" destination="IJh-w0-WZe" id="ZmZ-83-IPp"/>
+                                            <outlet property="leagueSport" destination="GLm-pw-3Tr" id="MRi-HF-XF9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="URL-e2-13a"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jKW-y7-Xp8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
