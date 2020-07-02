@@ -11,6 +11,7 @@ protocol HomeViewControllerView : AnyObject {
     func navigateToLeaugesDetails(id : String)
     func startLoading()
     func stopLoading()
+    func showAlert(title : String , message : String)
     
 }
 protocol HomeViewControllerPresenter {
@@ -39,15 +40,15 @@ extension HomeViewControllerPresenterImpl : HomeViewControllerPresenter {
     
     func getLeauges(completionHandler: @escaping ([Leagues]) -> Void) {
         view?.startLoading()
-        LeagueRequest.leagueRequest(request: LeagueRouter.getLeagues) { (leauges : League?) in
+        LeagueRequest.leagueRequest(request: LeagueRouter.getLeagues) { [weak self] (leauges : League?) in
             if let leauges = leauges {
-                self.leauges.append(contentsOf: leauges.leagues)
+                self?.leauges.append(contentsOf: leauges.leagues)
                 completionHandler(leauges.leagues)
             }
             else {
-                // show error to user
+                self?.view?.showAlert(title: "Connection", message: "Please Check Your Connection")
             }
-            self.view?.stopLoading()
+            self?.view?.stopLoading()
         }
     }
 

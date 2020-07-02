@@ -16,9 +16,9 @@ class HomeViewController: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeViewControllerPresenter = HomeViewControllerPresenterImpl(view : self)
-        homeViewControllerPresenter?.getLeauges(completionHandler: { (leagues) in
+        homeViewControllerPresenter?.getLeauges(completionHandler: { [weak self] (leagues) in
             if !leagues.isEmpty {
-                self.leaugeTableView.reloadData()
+                self?.leaugeTableView.reloadData()
             }
         })
     }
@@ -43,6 +43,13 @@ extension HomeViewController : UITableViewDelegate {
     }
 }
 extension HomeViewController : HomeViewControllerView {
+    func showAlert(title : String , message : String) {
+        let alert = UIAlertController(title: title , message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)}
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
     func startLoading() {
         self.startAnimating()
     }
