@@ -15,6 +15,7 @@
 		5229361624AD3D06001B6156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5229361424AD3D06001B6156 /* Main.storyboard */; };
 		5229361824AD3D08001B6156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5229361724AD3D08001B6156 /* Assets.xcassets */; };
 		5229361B24AD3D08001B6156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5229361924AD3D08001B6156 /* LaunchScreen.storyboard */; };
+		528CFB7324AF597300BBF2F6 /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CFB7224AF597300BBF2F6 /* RealmManger.swift */; };
 		5296BFC824AD3F7E00FF959A /* LeagueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFC724AD3F7E00FF959A /* LeagueRequest.swift */; };
 		5296BFCA24AD3F9400FF959A /* LeagueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFC924AD3F9400FF959A /* LeagueRouter.swift */; };
 		5296BFCD24AD456500FF959A /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFCC24AD456500FF959A /* League.swift */; };
@@ -35,6 +36,7 @@
 		5229361724AD3D08001B6156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5229361A24AD3D08001B6156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5229361C24AD3D08001B6156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528CFB7224AF597300BBF2F6 /* RealmManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
 		5296BFC724AD3F7E00FF959A /* LeagueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRequest.swift; sourceTree = "<group>"; };
 		5296BFC924AD3F9400FF959A /* LeagueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRouter.swift; sourceTree = "<group>"; };
 		5296BFCC24AD456500FF959A /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		5229360D24AD3D06001B6156 /* LeagueGoals */ = {
 			isa = PBXGroup;
 			children = (
+				528CFB7124AF595600BBF2F6 /* Database */,
 				5296BFC624AD3F4600FF959A /* NetworkLayer */,
 				5296BFCB24AD450100FF959A /* Model */,
 				5296BFD024AD4DF400FF959A /* View */,
@@ -116,6 +119,14 @@
 				5296BFD224AD4F2500FF959A /* DetailsViewController.swift */,
 			);
 			path = "Details Screen";
+			sourceTree = "<group>";
+		};
+		528CFB7124AF595600BBF2F6 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				528CFB7224AF597300BBF2F6 /* RealmManger.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		5296BFC624AD3F4600FF959A /* NetworkLayer */ = {
@@ -293,6 +304,7 @@
 				5296BFD324AD4F2500FF959A /* DetailsViewController.swift in Sources */,
 				5224251D24AD79F300807496 /* LeaugeTableViewCell.swift in Sources */,
 				5296BFD524AD4FC800FF959A /* DetailsViewControllerPresenter.swift in Sources */,
+				528CFB7324AF597300BBF2F6 /* RealmManger.swift in Sources */,
 				5296BFCA24AD3F9400FF959A /* LeagueRouter.swift in Sources */,
 				5296BFC824AD3F7E00FF959A /* LeagueRequest.swift in Sources */,
 				5296BFCD24AD456500FF959A /* League.swift in Sources */,

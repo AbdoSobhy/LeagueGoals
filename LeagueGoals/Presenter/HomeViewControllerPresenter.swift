@@ -43,10 +43,14 @@ extension HomeViewControllerPresenterImpl : HomeViewControllerPresenter {
         LeagueRequest.leagueRequest(request: LeagueRouter.getLeagues) { [weak self] (leauges : League?) in
             if let leauges = leauges {
                 self?.leauges.append(contentsOf: leauges.leagues)
+                RealmManger.saveleagues(league: leauges.leagues)
                 completionHandler(leauges.leagues)
             }
             else {
                 self?.view?.showAlert(title: "Connection", message: "Please Check Your Connection")
+                self?.leauges.append(contentsOf: RealmManger.fetchleagues())
+                completionHandler(RealmManger.fetchleagues())
+
             }
             self?.view?.stopLoading()
         }

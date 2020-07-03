@@ -9,5 +9,6 @@ target 'LeagueGoals' do
 	pod 'Alamofire', '~> 5.0'
 	pod 'Kingfisher', '~> 5.0'
 	pod 'NVActivityIndicatorView', '~> 4.8.0'
+  pod 'RealmSwift', '~> 4.4.1'
 
 end

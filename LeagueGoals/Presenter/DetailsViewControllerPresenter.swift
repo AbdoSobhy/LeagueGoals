@@ -16,6 +16,8 @@ protocol DetailsViewControllerView : AnyObject {
     func display(leaugeDescription : String)
     func startLoading()
     func stopLoading()
+    func dismiss()
+    func showAlert(title : String , message : String)
 
 }
 protocol DetailsViewControllerPresenter {
@@ -40,6 +42,9 @@ extension DetailsViewControllerPresenterImpl : DetailsViewControllerPresenter {
                 self?.view?.display(leaugeSport: details?.leagues[0].strSport ?? " ")
                 self?.view?.display(leaugeCountry: details?.leagues[0].strCountry ?? " ")
                 self?.view?.display(leaugeDescription: details?.leagues[0].strDescriptionEN ?? " ")
+            } else {
+                self?.view?.showAlert(title: "Connection!", message: "There is no connection to view this page")
+                self?.view?.dismiss()
             }
             self?.view?.stopLoading()
         }

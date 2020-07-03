@@ -6,23 +6,33 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - Kingfisher (~> 5.0)
   - NVActivityIndicatorView (~> 4.8.0)
+  - RealmSwift (~> 4.4.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
     - NVActivityIndicatorView
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
 
-PODFILE CHECKSUM: 1825f22ec47cc1553747c632870142df35d828cd
+PODFILE CHECKSUM: a1a15334f9745c8623823e7d63a03404c70d8bff
 
 COCOAPODS: 1.9.0

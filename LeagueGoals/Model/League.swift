@@ -7,14 +7,22 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct League : Codable {
     let leagues : [Leagues]
 }
 
-struct Leagues : Codable {
-    let idLeague : String?
-    let strLeague : String?
-    let strSport : String?
-    let strLeagueAlternate : String?
+class Leagues : Object,Codable {
+    @objc dynamic var idLeague : String? = nil
+    @objc dynamic var strLeague : String? = nil
+    @objc dynamic var strSport : String? = nil
+    @objc dynamic var strLeagueAlternate : String? = nil
+    
+    override static func primaryKey() -> String? {
+        return "idLeague"
+    }
+
 }
+
+

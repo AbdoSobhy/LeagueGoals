@@ -32,6 +32,18 @@ class DetailsViewController: UIViewController, NVActivityIndicatorViewable {
     
 }
 extension DetailsViewController : DetailsViewControllerView {
+    func showAlert(title : String , message : String) {
+        let alert = UIAlertController(title: title , message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Dismiss", style: .default) { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)}
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+
+    func dismiss() {
+    self.dismiss(animated: true, completion: nil)
+    
+    }
     func startLoading() {
         self.startAnimating()
     }
@@ -54,7 +66,7 @@ extension DetailsViewController : DetailsViewControllerView {
     func display(leaugeDescription : String){
         self.leaugeDescription.text = leaugeDescription
     }
-
-
+    
+    
     
 }
