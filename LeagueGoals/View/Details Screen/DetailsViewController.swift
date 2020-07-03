@@ -53,6 +53,7 @@ extension DetailsViewController : DetailsViewControllerView {
     }
     func display(leaugeLogo : String ){
         self.leaugeLogo.kf.setImage(with: URL(string: leaugeLogo))
+        self.leaugeLogo.kf.indicatorType = .activity
     }
     func display(leaugeName : String){
         self.leaugeName.text = leaugeName
