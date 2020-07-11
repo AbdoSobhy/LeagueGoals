@@ -8,9 +8,9 @@
 
 import UIKit
 protocol LeaugeCellView {
-    func display(leagueName : String)
-    func display(leagueShortName : String)
-    func display(leagueSport : String)
+    func display(leagueName : String?)
+    func display(leagueShortName : String?)
+    func display(leagueSport : String?)
     
 }
 class LeaugeTableViewCell: UITableViewCell {
@@ -25,16 +25,25 @@ class LeaugeTableViewCell: UITableViewCell {
 }
 extension LeaugeTableViewCell : LeaugeCellView {
     
-    func display(leagueName: String) {
-        self.leagueName.text = leagueName
+    func display(leagueName: String?) {
+        if leagueName != "" {
+            self.leagueName.isHidden = false
+            self.leagueName.text = leagueName
+        }
     }
     
-    func display(leagueShortName: String) {
-        self.leagueShortName.text = leagueShortName
+    func display(leagueShortName: String?) {
+        if leagueShortName != "" {
+            self.leagueShortName.isHidden = false
+            self.leagueShortName.text = leagueShortName
+        }
     }
     
-    func display(leagueSport: String) {
-        self.leagueSport.text = leagueSport
+    func display(leagueSport: String?) {
+        if leagueSport != "" {
+            self.leagueSport.isHidden = false
+            self.leagueSport.text = leagueSport
+        }
     }
     
 }

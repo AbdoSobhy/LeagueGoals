@@ -58,9 +58,9 @@ extension HomeViewControllerPresenterImpl : HomeViewControllerPresenter {
 
         // Cell Configure
     func configure(cell : LeaugeCellView , row : Int){
-        cell.display(leagueName: self.leauges[row].strLeague ?? "")
-        cell.display(leagueShortName: self.leauges[row].strLeagueAlternate ?? "")
-        cell.display(leagueSport: self.leauges[row].strSport ?? "")
+        cell.display(leagueName: self.leauges[row].strLeague)
+        cell.display(leagueShortName: self.leauges[row].strLeagueAlternate)
+        cell.display(leagueSport: self.leauges[row].strSport)
     }
     func didSelectRowAt(index: Int){
         guard let leagueID = self.leauges[index].idLeague else { return }
