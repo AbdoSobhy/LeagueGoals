@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class RealmManger{
+    fileprivate init(){ }
     
     private static let realm = try! Realm()
 
