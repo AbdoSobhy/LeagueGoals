@@ -15,6 +15,7 @@
 		5229361624AD3D06001B6156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5229361424AD3D06001B6156 /* Main.storyboard */; };
 		5229361824AD3D08001B6156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5229361724AD3D08001B6156 /* Assets.xcassets */; };
 		5229361B24AD3D08001B6156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5229361924AD3D08001B6156 /* LaunchScreen.storyboard */; };
+		52635D0D24C9C9B300BE426A /* LeagueGoalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52635D0C24C9C9B300BE426A /* LeagueGoalsTests.swift */; };
 		528CFB7324AF597300BBF2F6 /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CFB7224AF597300BBF2F6 /* RealmManger.swift */; };
 		5296BFC824AD3F7E00FF959A /* LeagueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFC724AD3F7E00FF959A /* LeagueRequest.swift */; };
 		5296BFCA24AD3F9400FF959A /* LeagueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFC924AD3F9400FF959A /* LeagueRouter.swift */; };
@@ -24,6 +25,16 @@
 		5296BFD524AD4FC800FF959A /* DetailsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFD424AD4FC800FF959A /* DetailsViewControllerPresenter.swift */; };
 		5296BFD724AD4FEE00FF959A /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BFD624AD4FEE00FF959A /* HomeViewControllerPresenter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52635D0F24C9C9B300BE426A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5229360324AD3D06001B6156 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5229360A24AD3D06001B6156;
+			remoteInfo = LeagueGoals;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2EC4FBD872EE3F1E446A8B7D /* Pods_LeagueGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +47,9 @@
 		5229361724AD3D08001B6156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5229361A24AD3D08001B6156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5229361C24AD3D08001B6156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52635D0A24C9C9B300BE426A /* LeagueGoalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeagueGoalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52635D0C24C9C9B300BE426A /* LeagueGoalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueGoalsTests.swift; sourceTree = "<group>"; };
+		52635D0E24C9C9B300BE426A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528CFB7224AF597300BBF2F6 /* RealmManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
 		5296BFC724AD3F7E00FF959A /* LeagueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRequest.swift; sourceTree = "<group>"; };
 		5296BFC924AD3F9400FF959A /* LeagueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRouter.swift; sourceTree = "<group>"; };
@@ -57,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52635D0724C9C9B300BE426A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5229360D24AD3D06001B6156 /* LeagueGoals */,
+				52635D0B24C9C9B300BE426A /* LeagueGoalsTests */,
 				5229360C24AD3D06001B6156 /* Products */,
 				6662213523A02C3F99FE411D /* Pods */,
 				AEFAE7E6536E7F13C04CE1A4 /* Frameworks */,
@@ -74,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5229360B24AD3D06001B6156 /* LeagueGoals.app */,
+				52635D0A24C9C9B300BE426A /* LeagueGoalsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +142,15 @@
 				5296BFD224AD4F2500FF959A /* DetailsViewController.swift */,
 			);
 			path = "Details Screen";
+			sourceTree = "<group>";
+		};
+		52635D0B24C9C9B300BE426A /* LeagueGoalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				52635D0C24C9C9B300BE426A /* LeagueGoalsTests.swift */,
+				52635D0E24C9C9B300BE426A /* Info.plist */,
+			);
+			path = LeagueGoalsTests;
 			sourceTree = "<group>";
 		};
 		528CFB7124AF595600BBF2F6 /* Database */ = {
@@ -204,18 +236,40 @@
 			productReference = 5229360B24AD3D06001B6156 /* LeagueGoals.app */;
 			productType = "com.apple.product-type.application";
 		};
+		52635D0924C9C9B300BE426A /* LeagueGoalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52635D1324C9C9B300BE426A /* Build configuration list for PBXNativeTarget "LeagueGoalsTests" */;
+			buildPhases = (
+				52635D0624C9C9B300BE426A /* Sources */,
+				52635D0724C9C9B300BE426A /* Frameworks */,
+				52635D0824C9C9B300BE426A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52635D1024C9C9B300BE426A /* PBXTargetDependency */,
+			);
+			name = LeagueGoalsTests;
+			productName = LeagueGoalsTests;
+			productReference = 52635D0A24C9C9B300BE426A /* LeagueGoalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5229360324AD3D06001B6156 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Macbook pro";
 				TargetAttributes = {
 					5229360A24AD3D06001B6156 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					52635D0924C9C9B300BE426A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 5229360A24AD3D06001B6156;
 					};
 				};
 			};
@@ -233,6 +287,7 @@
 			projectRoot = "";
 			targets = (
 				5229360A24AD3D06001B6156 /* LeagueGoals */,
+				52635D0924C9C9B300BE426A /* LeagueGoalsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +300,13 @@
 				5229361B24AD3D08001B6156 /* LaunchScreen.storyboard in Resources */,
 				5229361824AD3D08001B6156 /* Assets.xcassets in Resources */,
 				5229361624AD3D06001B6156 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52635D0824C9C9B300BE426A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +374,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52635D0624C9C9B300BE426A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52635D0D24C9C9B300BE426A /* LeagueGoalsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52635D1024C9C9B300BE426A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5229360A24AD3D06001B6156 /* LeagueGoals */;
+			targetProxy = 52635D0F24C9C9B300BE426A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5229361424AD3D06001B6156 /* Main.storyboard */ = {
@@ -488,6 +566,48 @@
 			};
 			name = Release;
 		};
+		52635D1124C9C9B300BE426A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67S6R633P7;
+				INFOPLIST_FILE = LeagueGoalsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = project.LeagueGoalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeagueGoals.app/LeagueGoals";
+			};
+			name = Debug;
+		};
+		52635D1224C9C9B300BE426A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67S6R633P7;
+				INFOPLIST_FILE = LeagueGoalsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = project.LeagueGoalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeagueGoals.app/LeagueGoals";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +625,15 @@
 			buildConfigurations = (
 				5229362024AD3D08001B6156 /* Debug */,
 				5229362124AD3D08001B6156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52635D1324C9C9B300BE426A /* Build configuration list for PBXNativeTarget "LeagueGoalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52635D1124C9C9B300BE426A /* Debug */,
+				52635D1224C9C9B300BE426A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
