@@ -10,11 +10,11 @@ import XCTest
 @testable import LeagueGoals
 
 class LeagueGoalsTests: XCTestCase {
-    
     func testGetAllLeagues() {
+        // Given
         let expectation = self.expectation(description: "leagues")
-        
         var leagues : [Leagues]?
+        // When
         LeagueRequest.leagueRequest(request: LeagueRouter.getLeagues) { (results : League?) in
             if let results = results  {
                 leagues = results.leagues
@@ -22,21 +22,24 @@ class LeagueGoalsTests: XCTestCase {
             expectation.fulfill()
         }
         
-        waitForExpectations(timeout: 10, handler: nil)
-        
+        waitForExpectations(timeout: 5, handler: nil)
+        // After
         XCTAssertNotNil(leagues,"failed to load table view")
     }
     func testDetailsLeauge() {
-        let expectation  = self.expectation(description: "detailed leauge")
+        // Given
+        let expectation  = self.expectation(description: "detailedLeauge")
         let id = "4328"
         var leaugeDetailed : [LeagueData]?
+        // When
         LeagueRequest.leagueRequest(request: LeagueRouter.leaguesDetails(id: id)) { (leauge : LeagueDetails?) in
             if let leauge = leauge {
                 leaugeDetailed = leauge.leagues
             }
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 10, handler: nil)
+        waitForExpectations(timeout: 5)
+        // After
         XCTAssertNotNil(leaugeDetailed,"failed to load details")
 
     }
